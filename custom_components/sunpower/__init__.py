@@ -40,6 +40,7 @@ def sunpower_fetch(sunpower_monitor):
                 data[device["DEVICE_TYPE"]] = {device["SERIAL"]: device}
             else:
                 data[device["DEVICE_TYPE"]][device["SERIAL"]] = device
+        sunpower_monitor.stop_config()
         return data
     except ConnectionException as error:
         raise UpdateFailed from error

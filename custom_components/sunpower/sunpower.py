@@ -36,3 +36,7 @@ class SunPowerMonitor:
     def network_status(self):
         """Get a list of network interfaces on the PVS"""
         return self.generic_command("Get_Comm")
+
+    def stop_config(self):
+        """Get a list of network interfaces on the PVS"""
+        return self.generic_command("Stop")
